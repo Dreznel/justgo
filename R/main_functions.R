@@ -11,7 +11,7 @@ now <- function(pkgs = c()) {
   }
 
   ## If so, copy over the template .yml file to the working directory (maybe write this?_)
-  generate_pkgr_config("tidyverse")
+  generate_pkgr_config(pkgs = c("renv"))
 
   ## Check if renv is installed
   renv_installed <- length(which(installed.packages()[,1] == "renv")) > 0
